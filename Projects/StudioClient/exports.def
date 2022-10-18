@@ -1,0 +1,7 @@
+LIBRARY "studioClient"
+EXPORTS
+	notify
+	setupNotifications
+	checkStudio
+	resetScore
+	shutdownPC

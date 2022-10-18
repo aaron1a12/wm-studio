@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{163f1ec9-966c-41db-8fbf-126453aebab4}</ProjectGuid>
+    <RootNamespace>StudioGUI</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)Build\$(PlatformTarget)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)Build\$(PlatformTarget)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)Build\$(PlatformTarget)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)Build\$(PlatformTarget)\</OutDir>
+    <TargetExt>.bin</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Third-party\ultralight\include\;$(SolutionDir)Common\;$(SolutionDir)Third-party\jsoncpp\inc\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)Third-party\ultralight\lib\;$(SolutionDir)Third-party\jsoncpp\lib\$(Configuration)\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>WebCore.lib;UltralightCore.lib;Ultralight.lib;AppCore.lib;jsoncpp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)Resources\;$(SolutionDir)Common\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <PostBuildEvent>
+      <Command>XCOPY "$(SolutionDir)Third-party\ultralight\bin\AppCore.dll" "$(TargetDir)" /i /y /D
+XCOPY "$(SolutionDir)Third-party\ultralight\bin\Ultralight.dll" "$(TargetDir)" /i /y /D
+XCOPY "$(SolutionDir)Third-party\ultralight\bin\UltralightCore.dll" "$(TargetDir)" /i /y /D
+XCOPY "$(SolutionDir)Third-party\ultralight\bin\WebCore.dll" "$(TargetDir)" /i /y /D
+mkdir "$(TargetDir)resources"
+XCOPY "$(SolutionDir)Third-party\ultralight\bin\resources\cacert.pem" "$(TargetDir)resources" /i /y /D
+XCOPY "$(SolutionDir)Third-party\ultralight\bin\resources\icudt67l.dat" "$(TargetDir)resources" /i /y /D</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Third-party\ultralight\include\;$(SolutionDir)Common\;$(SolutionDir)Third-party\jsoncpp\inc\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)Third-party\ultralight\lib\;$(SolutionDir)Third-party\jsoncpp\lib\$(Configuration)\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>WebCore.lib;UltralightCore.lib;Ultralight.lib;AppCore.lib;jsoncpp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)Resources\;$(SolutionDir)Common\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <PostBuildEvent>
+      <Command>XCOPY "$(SolutionDir)Third-party\ultralight\bin\AppCore.dll" "$(TargetDir)" /i /y /D
+XCOPY "$(SolutionDir)Third-party\ultralight\bin\Ultralight.dll" "$(TargetDir)" /i /y /D
+XCOPY "$(SolutionDir)Third-party\ultralight\bin\UltralightCore.dll" "$(TargetDir)" /i /y /D
+XCOPY "$(SolutionDir)Third-party\ultralight\bin\WebCore.dll" "$(TargetDir)" /i /y /D
+mkdir "$(TargetDir)resources"
+XCOPY "$(SolutionDir)Third-party\ultralight\bin\resources\cacert.pem" "$(TargetDir)resources" /i /y /D
+XCOPY "$(SolutionDir)Third-party\ultralight\bin\resources\icudt67l.dat" "$(TargetDir)resources" /i /y /D</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Third-party\ultralight\include\;$(SolutionDir)Common\;$(SolutionDir)Third-party\jsoncpp\inc\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)Third-party\ultralight\lib\;$(SolutionDir)Third-party\jsoncpp\lib\$(Configuration)\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>WebCore.lib;UltralightCore.lib;Ultralight.lib;AppCore.lib;jsoncpp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)Resources\;$(SolutionDir)Common\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <PostBuildEvent>
+      <Command>XCOPY "$(SolutionDir)Third-party\ultralight\bin\AppCore.dll" "$(TargetDir)" /i /y /D
+XCOPY "$(SolutionDir)Third-party\ultralight\bin\Ultralight.dll" "$(TargetDir)" /i /y /D
+XCOPY "$(SolutionDir)Third-party\ultralight\bin\UltralightCore.dll" "$(TargetDir)" /i /y /D
+XCOPY "$(SolutionDir)Third-party\ultralight\bin\WebCore.dll" "$(TargetDir)" /i /y /D
+mkdir "$(TargetDir)resources"
+XCOPY "$(SolutionDir)Third-party\ultralight\bin\resources\cacert.pem" "$(TargetDir)resources" /i /y /D
+XCOPY "$(SolutionDir)Third-party\ultralight\bin\resources\icudt67l.dat" "$(TargetDir)resources" /i /y /D</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Third-party\ultralight\include\;$(SolutionDir)Common\;$(SolutionDir)Third-party\jsoncpp\inc\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)Third-party\ultralight\lib\;$(SolutionDir)Third-party\jsoncpp\lib\$(Configuration)\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>WebCore.lib;UltralightCore.lib;Ultralight.lib;AppCore.lib;jsoncpp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)Resources\;$(SolutionDir)Common\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <PostBuildEvent>
+      <Command>XCOPY "$(SolutionDir)Third-party\ultralight\bin\AppCore.dll" "$(TargetDir)" /i /y /D
+XCOPY "$(SolutionDir)Third-party\ultralight\bin\Ultralight.dll" "$(TargetDir)" /i /y /D
+XCOPY "$(SolutionDir)Third-party\ultralight\bin\UltralightCore.dll" "$(TargetDir)" /i /y /D
+XCOPY "$(SolutionDir)Third-party\ultralight\bin\WebCore.dll" "$(TargetDir)" /i /y /D
+mkdir "$(TargetDir)resources"
+mkdir "$(TargetDir)cache"
+XCOPY "$(SolutionDir)Third-party\ultralight\bin\resources\cacert.pem" "$(TargetDir)resources" /i /y /D
+XCOPY "$(SolutionDir)Third-party\ultralight\bin\resources\icudt67l.dat" "$(TargetDir)resources" /i /y /D</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="StudioGUI.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\Resources\app_icon.ico" />
+    <Image Include="..\..\Resources\app_icon_sm.ico" />
+    <Image Include="..\..\resources\icon2.ico" />
+    <Image Include="..\..\Resources\splash.bmp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

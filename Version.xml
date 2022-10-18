@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<VersionInfo>
+	<Name>Wild Montage Studio</Name>
+	<Product>Wild Montage Studio</Product>
+	<Company>Wild Montage, Inc</Company>
+	<Copyright>(c) Copyright 2015-2021 Wild Montage, LLC. All rights reserved.</Copyright>
+	<Website>https://www.wildmontage.com</Website>
+	<!--
+	Enter here the version to compile as. Not zero-filled.
+
+	{MAJOR}.{MINOR}.{PATCH}
+	-->
+	<Version>0.3.1</Version>
+	<!--
+	These values will change automatically.
+	-->
+	<BuildNumber>306</BuildNumber>
+	<BuildDate>1626199665219</BuildDate>
+</VersionInfo>
