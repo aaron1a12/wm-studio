@@ -1,0 +1,18 @@
+<div style="border:20px solid transparent;">
+	<div id="scoreBg" style="background-color:#003333;color:#fff;text-shadow: 1px 1px 4px black;font-size:18pt; border-radius:12px;padding:20px;">
+		<h1 style="font-size:20px;">Productivity Score (in seconds): <span id="spanScore" style="font-weight:900;"></span></h1>
+	</div>
+	
+	<p>Your productivity score is measured by how much you use productive apps.</p> <p>You may view your score's history, as well as other users' analytics, online <a href="#" onclick="App.Run('http://studio.wildmontage.com/analytics/');">here</a>. </p>
+	
+	<br>
+	
+	<fieldset>
+		<legend>Render Mode</legend>
+		<p>If you're going to be rendering or simulating a long task, you can enable "Render Mode". During this mode, you'll only earn about <b>half</b> of what you usually earn. You will need to leave the app activated. However, you won't have to be actively using it.</p>
+		<button id="renderModeBtn" onclick="enableRenderMode();" style="float:right;">Enable Render Mode for 10 mins.</button>
+	</fieldset>		
+	
+</div>
+
+<script>analyticsInit();</script>

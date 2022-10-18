@@ -1,0 +1,41 @@
+<div id="projectViewerContainer" style="background-size: 100%;  background-repeat: no-repeat;">
+	<div style="padding:20px;">
+		<div style="float:left;margin-bottom:20px;">
+			<button onclick="openInPane('projects.html', 'tbProjects');"><i class="material-icons">arrow_back</i> Back to Projects</button>
+			<button disabled><i class="material-icons">mode_edit</i> Edit this Project</button>
+		</div>
+		
+		
+		
+		
+		<img id="projectPoster" style="float:right;height:100px;">
+		
+		<div style="float:right;margin-right:20px;">
+			<h2 id="projectTitle" style="margin-top:0;margin-bottom:0;"></h2>
+			<table class="projectDetailsTable">
+				<tr>
+					<td>Start Date:</td>
+					<td><span id="projectViewerDate"></span></td>
+				</tr>
+				<tr>
+					<td>Running Time:</td>
+					<td><span id="projectViewerRunning"></span></td>
+				</tr>
+				<tr>
+					<td>Project Progress:</td>
+					<td><span id="projectViewerProg"></span></td>
+				</tr>				
+			</table>
+		</div>
+		<div style="clear:both;"></div>
+	</div>
+	
+	<div id="projectViewerProgBar" style="position:relative;"><div class="projectProgress" style="background:rgba(0,255,255,0.5);"></div></div>
+</div>
+
+<div id="projectViewerPage" class="panePadding">
+	<div id="projectStages" class="projectStagesContainer panePadding">
+	</div>
+</div>
+
+<script>projectViewerInit();</script>

@@ -1,0 +1,34 @@
+<div class="panePadding">
+
+	<button onclick="openInPane('project_tasks.html', getActivePane());"><i class="material-icons">arrow_back</i> View other Tasks</button>
+	<button onclick="projectTasksEditActive();"><i class="material-icons">mode_edit</i> Edit this Task</button>
+
+	<div style="float:right;text-align:right;">
+		<button onclick="projectJobsCreateNew();"><i class="material-icons">add</i> Create New Job</button>
+		<button onclick="refreshInPane( getActivePane() );"><i class="material-icons">refresh</i> Refresh</button>
+	</div>
+	
+	<h1><span id="projectTaskName"></span> <span id="projectTaskProg"></span></h1>
+	<p id="projectTaskDesc"></p>
+	
+	<h3 style="margin-top:40px;">Job list</h3>
+
+	<table class="project table">
+		<thead>
+			<tr>
+				<th style="width:10%;">Thumbnail</th>
+				<th>Name</th>
+				<th>Description</th>
+				<th>Priority &darr;</th>
+				<th>Done</th>
+			</tr>
+		</thead>
+		
+		<tbody id="jobTable">
+		</tbody>
+	</table>
+	
+</div>
+
+
+<script>projectJobsInit();</script>

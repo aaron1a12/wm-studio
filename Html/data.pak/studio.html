@@ -1,0 +1,89 @@
+<!doctype html>
+<head>
+<meta charset="utf-8">
+<title>Studio</title>
+<link href="media/css/style.css" rel="stylesheet" type="text/css">
+
+<!--<script src="media/js/jquery.2.1.0.min.js"></script>-->
+<script src="media/js/jquery.js"></script>
+<script src="media/js/vex/vex.combined.min.js"></script>
+<script>
+vex.defaultOptions.className = 'vex-theme-studio';
+vex.defaultOptions.overlayClosesOnClick = 'false'; // Not working?
+</script>
+<link rel="stylesheet" href="media/js/vex/vex.css" />
+<link rel="stylesheet" href="media/js/vex/vex-theme-studio.css" />
+
+<script src="media/js/smoothscroll.min.js"></script>
+<script src="media/js/getAverageRGB.js"></script>
+
+<!-- Studio -->
+<script>function console(){}</script>
+<script src="media/js/studio.js"></script>
+
+<!-- Pane specific -->
+<script src="media/js/projects.js"></script>
+<script src="media/js/analytics.js"></script>
+<script src="media/js/settings.js"></script>
+
+<script>
+function alert(msg) {App.alert(msg);}
+
+window.onerror = function(message, url, line){
+    App.PageError(message, url, line);
+};		
+
+</script>
+</head>
+
+<body style="-webkit-user-select:none;border:1px solid #00ffff;box-sizing: border-box;">
+<div id="chromeFrame">
+	<div id="studioPage" style="display:block;height:100%;position:relative;">
+
+		<div id="titlebar" style="background-color:#131313;height:30px;width:100%;position:absolute;top:0;background-image:url(media/img/titlebar_caption.png);background-repeat:no-repeat;">
+			<nav id="windowBtns" style="float:right;">
+				<a id="wndBtnSettings" title="Studio Settings"></a><a id="wndBtnMin" title="Minimize to taskbar"></a><a id="wndBtnMaxRestore" title="Maximize/Restore"></a><a id="wndBtnClose" title="Close Studio"></a>
+			</nav>
+		</div>
+			
+		<div id="mainNavContainer" style="background-color:#131313;width:100%;position:absolute;top:30px;">			
+			<nav id="mainNav">
+				
+				<button id="btnBack" onclick="goBackInPane(getActivePane());"><i class="material-icons">arrow_back</i></button><button id="btnForward" onclick="goForwardInPane(getActivePane())"><i class="material-icons">arrow_forward</i></button>
+				
+				
+				<a href="#" id="tbApps"><i class="material-icons">apps</i> Apps</a><a href="#" id="tbProjects"><i class="material-icons">assignment</i> Projects</a><a href="#" id="tbMyJobs"><i class="material-icons">assignment_ind</i> My Jobs</a><a href="#" id="tbAnalytics"><i class="material-icons">trending_up</i> Analytics</a>
+			</nav>
+			<div style="padding:15px;" onMouseOver="cursorEnterTitleBar();" onMouseOut="cursorLeaveTitleBar();" >&nbsp;</div>
+			<!--<div style="clear:both;"></div>-->
+			<!--<div style="position:absolute;top:63px;width:100%;border-bottom:1px solid rgba(0,0,0,0.15);pointer-events: none;"></div>-->
+		</div>
+		
+
+		<div id="tabContainer" style="height:auto; width:100%; position:absolute; top:79px;bottom:0;right:0;left:0;">
+		
+			<div id="paneLoadingScreen" style="position:absolute;width:100%;height:100%;background:rgba(68,68,68,0.5);z-index:999;">
+				<div style="text-align:center;margin-top:20%;">
+					<h1 style="text-shadow: 1px 1px 8px black;">Loading data...</h1>
+					<img src="media/img/loading.svg">
+				</div>
+			</div>
+		
+			<!-- ========== Begin Panes ==========  -->
+			<div id="tbApps_pane" class="tabPane"></div>
+
+			<div id="tbProjects_pane" class="tabPane"></div>
+			
+			<div id="tbMyJobs_pane" class="tabPane"></div>
+			
+			<div id="tbAnalytics_pane" class="tabPane"></div>
+			
+			<div id="tbSettings_pane" class="tabPane"></div>
+			<!-- ========== End Panes ==========  -->
+			
+		</div>
+    </div>
+	
+</div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<title>Studio</title>
+<style>
+body,html {height:100%;}
+
+body {margin:0;padding:0;font-family:sans-serif;}
+
+::selection {
+    color: #000; 
+    background: #00ffff;
+}
+
+.message {border:2px solid #00eeee;border-radius:12px;padding:10px;margin-top:30px;}
+</style>
+<script>
+function writeMessage(msg)
+{
+	messageArea = document.getElementById("messageArea");
+	messageDiv = document.createElement("DIV");
+	messageDiv.className = "message";
+	messageDiv.innerHTML = msg;
+	messageArea.appendChild(messageDiv);
+	
+	window.scrollTo(0,document.body.scrollHeight);
+}
+
+function clearMessages()
+{
+	messageArea = document.getElementById("messageArea");
+	messageArea.innerHTML = '';
+	parent.App.FreeMemory();
+}
+</script>
+<!--<link href="/media/css/style.css" rel="stylesheet" type="text/css">-->
+</head>
+
+<body>
+<div id="messageArea" style="padding:30px;">
+	
+	<script>
+	for(var i=1; i<1; i++){
+		document.write('<div class="message">System: Hello World!</div>');
+	}
+	</script>
+</div>
+<div style="visibility:hidden;font-size:0px;">.</div>
+</body>
+</html>

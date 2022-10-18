@@ -1,0 +1,46 @@
+<form method="post" enctype="multipart/form-data"  action="upload.php">
+	<input id="fileBrowser" type="file" multiple style="position:absolute; top:-200px;">
+</form>
+		
+<div class="panePadding">
+	<button onclick="projectJobLeaveEdit();"><i class="material-icons">cancel</i> Cancel</button>
+
+	<div style="float:right;text-align:right;">
+		<button onclick="projectJobSave();"><i class="material-icons">save</i> Save Job</button>
+		<button id="projectJobDeleteBtn" onclick="projectJobDelete();" style="display:none;" dangerous><i class="material-icons">delete_forever</i> Delete Job</button>
+	</div>
+	
+	<div style="clear:both;"></div>
+	
+	
+	
+	<table class="form" style="width:40%;float:left;">
+		<tr>
+			<td style="width:100%;"></td>
+			<td><h1 id="projectEditJobH1" style="width:300px;">Creating New Job</h1></td>
+		</tr>
+		<tr>
+			<td>Name:</td>
+			<td><input id="inputNewJobName" style="width:100%;"></td>
+		</tr>
+		<tr>
+			<td style="vertical-align:top;">Description:</td>
+			<td><textarea id="inputNewJobDesc" style="width:100%;height:100px;"></textarea></td>
+		</tr>
+		<tr>
+			<td>Priority:</td>
+			<td style="text-align:center;">Low <input style="width:50%;cursor:default;vertical-align:middle;" id="inputNewJobPriority" type="range" min="0" max="100" /> High</td>
+		</tr>
+		<tr>
+			<td>Task:</td>
+			<td id="projectJobFileUnder"></td>
+		</tr>
+	</table>
+	
+	<div style="float:left;margin-left:50px;width:200px;padding-top:95px;">
+		<img id="jobThumbnail" src="http://media.studio.wildmontage.com/projects/no-job-thumb.jpg" style="width:100%;">
+		<button id="projectEditJobThmbBtn" style="width:100%;"><i class="material-icons">file_upload</i> Change Thumbnail</button>
+	</div>
+	
+</div>
+<script>projectEditJobInit();</script>

@@ -1,0 +1,26 @@
+<div class="panePadding">
+	<button onclick="openInPane('project_viewer.html', getActivePane());"><i class="material-icons">arrow_back</i> Go to Project</button>
+
+	<div style="float:right;text-align:right;">
+		<button onclick="projectTasksCreateNew();"><i class="material-icons">create_new_folder</i> Create New Task</button>
+		<button onclick="refreshInPane( getActivePane() );"><i class="material-icons">refresh</i> Refresh</button>
+	</div>
+	
+	<h1>Tasks for <span id="projectStageName"></span> <span id="projectStageProgress"></span></h1>
+	
+	<table class="project table">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Description</th>
+			</tr>
+		</thead>
+		
+		<tbody id="taskTable">
+		</tbody>
+	</table>
+	
+</div>
+
+
+<script>projectTasksInit();</script>

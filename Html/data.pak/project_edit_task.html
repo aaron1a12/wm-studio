@@ -1,0 +1,31 @@
+<div class="panePadding">
+	<button onclick="projectTaskLeaveEdit();"><i class="material-icons">cancel</i> Cancel</button>
+
+	<div style="float:right;text-align:right;">
+		<button onclick="projectTaskSave();"><i class="material-icons">save</i> Save Task</button>
+		<button id="projectTaskDeleteBtn" onclick="projectTaskDelete();" style="display:none;" dangerous><i class="material-icons">delete_forever</i> Delete Task</button>
+	</div>
+	
+	
+	
+	<table class="form" style="width:60%;">
+		<tr>
+			<td style="width:100%;"></td>
+			<td><h1 id="projectEditTaskH1" style="width:300px;">Creating New Task</h1></td>
+		</tr>
+		<tr>
+			<td>Name:</td>
+			<td><input id="inputNewTaskName" style="width:100%;"></td>
+		</tr>
+		<tr>
+			<td style="vertical-align:top;">Description:</td>
+			<td><textarea id="inputNewTaskDesc" style="width:100%;height:100px;"></textarea></td>
+		</tr>		
+		<tr>
+			<td>Project Stage:</td>
+			<td id="projectTaskFileUnder"></td>
+		</tr>		
+	</table>
+	
+</div>
+<script>projectEditTaskInit();</script>
